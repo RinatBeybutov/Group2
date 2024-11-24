@@ -39,5 +39,7 @@ public class EqualsTest {
         String str4 = str1 + str3; //"ABCabc"
         String str5 = "ABCabc";
         System.out.println(str4 == str5); //false
+
+        String string6 = "ABC";
     }
 }
