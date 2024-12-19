@@ -1,5 +1,7 @@
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -26,7 +28,7 @@ public class Main {
         map.put(15, "four");
 
 
-        System.out.println();
+        System.out.println(map.size());
 
 
     }
@@ -84,5 +86,20 @@ public class Main {
         }
 
         System.out.println(Arrays.toString(split));
+    }
+
+    public static void test2(HashMap<String, Integer> wordCountMap) {
+        int maxCount = 0;
+        String maxWord = "";
+
+        for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) {
+            if(entry.getValue() > maxCount) {
+                maxCount = entry.getValue();
+                maxWord = entry.getKey();
+            }
+            System.out.printf("%s: %d\n", entry.getKey(), entry.getValue());
+        }
+
+        System.out.printf("Самое частое слово: %s, встречается %d раз\n", maxWord, maxCount);
     }
 }
