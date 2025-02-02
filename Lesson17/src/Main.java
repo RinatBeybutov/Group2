@@ -9,7 +9,7 @@ public class Main {
 
     // abc -> cba
     public static int reverseBits(int n) {
-        String binaryString = Integer.reverse().toBinaryString(n);
+        String binaryString = Integer.toBinaryString(n);
         StringBuilder builder = new StringBuilder(binaryString);
         builder.reverse();
         return Integer.parseInt(builder.toString(), 2);
